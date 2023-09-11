@@ -1,0 +1,31 @@
+/*Questão 02
+Enzio Ferreira Gomes*/
+
+#include <stdio.h>
+
+float hora;
+int horas, minutos, segundos;
+
+int main() {
+
+    printf("Por favor, digite a hora (no seguinte formato Horas:Minutos): ");
+    scanf("%f", &hora);
+
+    // Pega a parte inteira, que são as horas e a parte decimal, que são os minutos.
+
+    horas = (int)hora;
+    minutos = (int)((hora - horas) * 100); // Nessa parte, multiplicamos por 100 com o intuito de converter a parte decimal em minutos.
+
+    // Essa parte calcula os segundos.
+
+    segundos = (horas * 3600) + (minutos * 60); // Nessa parte o código converte horas e minutos para segundos.
+
+    if (horas >= 0 && horas <= 23 && minutos >= 0 && minutos <= 59) {
+        printf("A hora em minutos: %d minutos\n", horas * 60 + minutos);
+        printf("A hora em segundos: %d segundos\n", segundos);
+    } else {
+        printf("Essa hora é inválida.\n");
+    }
+
+    return 0;
+}
