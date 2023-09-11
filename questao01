@@ -1,0 +1,41 @@
+/*Questão 01
+Enzio Ferreira Gomes*/
+
+#include <stdio.h>
+#include <math.h>
+
+float numero, quadrado, cubo, raiz_quadrada, raiz_cubica, resto;
+
+int main() {
+    
+    printf("Por favor, digite um numero positivo e maior que zero: ");
+    scanf("%f", &numero);
+    
+    if (numero <= 0) {
+        printf("O numero tem que ser positivo e maior que zero.\n");
+        return 1;
+      
+    }
+    
+    // Essa parte do código calcula e apresenta o nùmero ao quadrado.
+    quadrado = numero * numero;
+    printf("O valor do numero ao quadrado é: %.2f\n", quadrado);
+    
+    // Essa parte do código calcula e apresenta o nùmero ao cubo.
+    cubo = numero * numero * numero;
+    printf("O valor do numero ao cubo é: %.2f\n", cubo);
+    
+    // Essa parte do código calcula e apresenta a raiz quadrada do número.
+    raiz_quadrada = sqrt(numero);
+    printf("O valor da raiz quadrada do numero é: %.2f\n", raiz_quadrada);
+    
+    // Essa parte do código calcula e apresenta a raiz cúbica do número.
+    raizCubica = cbrt(numero);
+    printf("A raiz cubica do numero e: %.2f\n", raiz_cubica);
+    
+    // Essa parte do código calcula e mostra o resto da divisão do número por 3.
+    resto = fmod(numero, 3);
+    printf("O valor do resto da divisao por 3 é: %.2f\n", resto);
+    
+    return 0;
+}
