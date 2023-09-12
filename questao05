@@ -1,0 +1,46 @@
+//Questão 05
+//Enzio ferreira Gomes
+
+#include <stdio.h>
+
+float soma_ids = 0, media_ids, porcent;
+int i, idade, contador = 0, contador_alt_ida = 0;
+
+int main() {
+    
+    for (i = 0; i < 10; i++) {
+        printf("Por favor, digite a idade da pessoa %d: ", i + 1);
+        scanf("%d", &idade);
+        
+        soma_ids += idade;
+
+        printf("Por favor, digite o peso (em kg) da pessoa %d: ", i + 1);
+        float peso;
+        scanf("%f", &peso);
+        
+        printf("Por favor, digite a altura (em metros) da pessoa %d: ", i + 1);
+        float altura;
+        scanf("%f", &altura);
+
+        if (peso > 80 && altura < 1.50) {
+            contador++;
+        }
+
+        if (idade >= 10 && idade <= 30 && altura > 1.90) {
+            contador_alt_ida++;
+        }
+    }
+    
+    //Essa parte do código calcula a média e a porcentagem.
+
+    media_ids = soma_ids / 10;
+    porcent = ((float)contador_alt_ida / 10) * 100;
+
+
+    printf("A média das idades é: %.2f\n", media_ids);
+    printf("As pessoas com peso maior que 80kg e altura menor que 1,50m são: %d\n", contador);
+    printf("A porcentagem de pessoas com idade entre 10 e 30 anos e altura maior 1,90m: %.2f%%\n", porcent);
+
+
+    return 0;
+}
